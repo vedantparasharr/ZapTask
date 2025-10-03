@@ -199,6 +199,7 @@ body {
     .task-date-input {
         height: 40px;
         padding: 10px;
+        max-width: 150px;
     }
     
     .add-task-button {
@@ -289,3 +290,4 @@ body {
         transform: translateY(0);
     }
 }
+
