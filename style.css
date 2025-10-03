@@ -1,0 +1,291 @@
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #FCE38A 0%, #EAFFD0 100%);
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   MAIN CONTAINER
+   ======================================== */
+
+.todo-list-container {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    max-width: 600px;
+    width: 95%;
+    margin: 150px auto;
+    background: #F38181;
+    border-radius: 16px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   TITLE SECTION
+   ======================================== */
+
+.app-title {
+    color: white;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.app-title-tagline {
+    color: rgba(255, 255, 255, 0.750);
+    font-weight: 200;
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+
+/* ========================================
+   INPUT SECTION
+   ======================================== */
+
+.input-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 100px;
+    gap: 8px;
+}
+
+.task-name-input,
+.task-date-input {
+    width: 100%;
+    height: 32px;
+    padding: 8px;
+    border: none;
+    background: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+/* ========================================
+   BUTTON STYLES
+   ======================================== */
+
+/* Add Task Button */
+.add-task-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 8px;
+    border: none;
+    background: #95E1D3;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-task-button:hover {
+    background: #7DCDC0;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Delete Task Button */
+.delete-task-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 8px;
+    border: none;
+    background: #FCE38A;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-task-button:hover {
+    background: #F5D563;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   TASK LIST DISPLAY
+   ======================================== */
+
+.tasks-list {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.task-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 100px;
+    gap: 8px;
+}
+
+.task-item {
+    overflow-x: auto;
+    white-space: nowrap;
+    background: white;
+    color: #333;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    padding: 8px;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari, Opera */
+.task-item::-webkit-scrollbar {
+    display: none;
+}
+
+/* Completed Task Styling */
+.task-item.completed {
+    text-decoration: line-through;
+    background: #666 !important;
+    color: white;
+    opacity: 0.8;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE
+   ======================================== */
+
+/* Mobile devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .todo-list-container {
+        padding: 20px;
+        margin: 40px auto;
+        width: 95%;
+    }
+    
+    .app-title {
+        font-size: 1.4rem;
+    }
+    
+    .input-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .task-name-input,
+    .task-date-input {
+        height: 40px;
+        padding: 10px;
+    }
+    
+    .add-task-button {
+        height: 44px;
+    }
+    
+    .task-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .task-item {
+        height: 40px;
+        padding: 10px;
+    }
+    
+    .delete-task-button {
+        height: 40px;
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN - TABLET
+   ======================================== */
+
+/* Small devices (portrait tablets and large phones, 600px to 767px) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .todo-list-container {
+        padding: 28px;
+        margin: 80px auto;
+    }
+    
+    .app-title {
+        font-size: 1.6rem;
+    }
+
+    .app-title-tagline {
+        font-size: 0.8rem;
+    }
+    
+    .input-section {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .task-row {
+        grid-template-columns: 2fr 1fr auto;
+    }
+    
+    .task-name-input,
+    .task-date-input {
+        height: 36px;
+    }
+    
+    .add-task-button,
+    .delete-task-button {
+        height: 36px;
+    }
+    
+    .task-item {
+        height: 36px;
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN - DESKTOP
+   ======================================== */
+
+/* Medium to large devices (tablets and small laptops, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .todo-list-container {
+        margin: 100px auto;
+    }
+    
+    body {
+        padding: 20px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .todo-list-container {
+        margin: 120px auto;
+    }
+    
+    .add-task-button:active,
+    .delete-task-button:active {
+        transform: translateY(0);
+    }
+}

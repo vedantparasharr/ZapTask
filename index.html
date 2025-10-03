@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main To-Do List Container -->
+    <div class="todo-list-container">
+        
+        <!-- Application Title -->
+        <div class="app-title">
+            <p>ZapTask</p>
+            <p class="app-title-tagline">Your Personal Task Manager</p>
+        </div>
+        
+        <!-- Task Input Section -->
+        <div class="input-section">
+            <div>
+                <input 
+                    type="text" 
+                    placeholder="Todo" 
+                    class="task-name-input" 
+                    onkeydown="if(event.key === 'Enter') { addTask(); }">
+            </div>
+            <div>
+                <input type="date" class="task-date-input">
+            </div>
+            <div>
+                <button class="add-task-button" onclick="addTask()">Add</button>
+            </div>
+        </div>
+        
+        <!-- Tasks Display Container -->
+        <div class="tasks-list"></div>
+        
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
