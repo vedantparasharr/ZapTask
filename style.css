@@ -192,7 +192,8 @@ body {
     }
     
     .input-section {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
     
     .task-name-input,
@@ -290,5 +291,6 @@ body {
         transform: translateY(0);
     }
 }
+
 
 
