@@ -6,7 +6,7 @@ A clean and simple to-do list web app to help you stay organized and get things 
 
 ## 🌟 Features
 
-- **Add Tasks**: Quickly add tasks with optional due dates
+- **Add Tasks**: Quickly add tasks with optional due dates 
 - **Mark as Complete**: Check off tasks when you're done - they'll get a nice strikethrough effect
 - **Delete Tasks**: Remove tasks you no longer need
 - **Persistent Storage**: Your tasks are saved locally, so they'll be there even after you close the browser
