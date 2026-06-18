@@ -1,5 +1,5 @@
 # ZapTask ⚡ 
-
+ 
 A clean and simple to-do list web app to help you stay organized and get things done! Built with vanilla HTML, CSS, and JavaScript.
 
 ![ZapTask Preview](https://zap-task-five.vercel.app/)
