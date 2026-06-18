@@ -1,4 +1,4 @@
-# ZapTask ⚡
+# ZapTask ⚡ 
 
 A clean and simple to-do list web app to help you stay organized and get things done! Built with vanilla HTML, CSS, and JavaScript.
 
